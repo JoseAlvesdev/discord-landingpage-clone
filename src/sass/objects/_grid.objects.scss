@@ -1,0 +1,5 @@
+.o-grid-container-2cr {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto);
+  gap: var(--16px-pr-rem);
+} 

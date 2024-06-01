@@ -1,0 +1,140 @@
+.c-section {
+  color: var(--black);
+
+  &__img {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: var(--24px-pr-rem);
+    font-weight: 800;
+    line-height: calc(var(--24px-pr-rem) + 10);
+  }
+
+  &__description {
+    line-height: calc(var(--16px-pr-rem) * 1.5);
+  }
+
+  .c-main-content & {
+    &:nth-child(2n) {
+      background-color: var(--gray);
+    }
+  }
+
+  .o-wrapper {
+    max-width: var(--970px-pr-rem);
+  }
+
+  .o-flex-container-col {
+    gap: var(--28px-pr-rem);
+    padding: var(--40px-pr-rem) var(--24px-pr-rem);
+  }
+
+  &--special {
+    .o-flex-container-col {
+      .c-section__img {
+        order: 1;
+      }
+    }
+  }
+}
+
+/*
+=========================================================================
+    RESPONSIVE
+=========================================================================
+*/
+
+// OBS.: Titulos 24px Ate 768 32px | 992 40px
+
+// Small ≥ 576px
+@media screen and (min-width: $sm) {
+  .c-section {
+    text-align: center;
+  }
+}
+
+// Medium ≥ 768px
+@media screen and (min-width: $md) {
+  .c-section {
+    &__title {
+      font-size: var(--32px-pr-rem);
+      line-height: calc(var(--32px-pr-rem) + 10);
+    }
+
+    .o-flex-container-col {
+      padding: var(--40px-pr-rem) var(--48px-pr-rem);
+    }
+
+    .o-flex-container-col {
+      gap: var(--16px-pr-rem);
+    }
+  }
+}
+
+// Large ≥ 992px
+@media screen and (min-width: $lg) {
+  .c-section {
+    text-align: start;
+
+    &__title {
+      font-size: var(--40px-pr-rem);
+      line-height: calc(var(--40px-pr-rem) + 10);
+    }
+
+    .o-grid-container-2cr {
+      padding: var(--40px-pr-rem) var(--48px-pr-rem);
+
+      grid-template-areas:
+        "img title"
+        "img description"
+      ;
+
+      .c-section__img {
+        grid-area: img;
+      }
+
+      .c-section__title {
+        grid-area: title;
+        align-self: end;
+        max-width: var(--348px-pr-rem);
+      }
+
+      .c-section__description {
+        grid-area: description;
+        max-width: var(--348px-pr-rem);
+      }
+    }
+
+    
+    &--reverse {
+      .o-grid-container-2cr {
+        grid-template-areas:
+        "title img"
+        "description img"
+        ;
+      }
+    }
+
+    &--special {
+      .o-flex-container-col {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// Extra Large ≥ 1200px
+@media screen and (min-width: $xl) {
+  .c-section {
+    .o-grid-container-2cr {
+      padding: var(--40px-pr-rem) 0;
+    }
+
+    &--special {
+      .o-flex-container-col {
+        padding: var(--40px-pr-rem) 0;
+      }
+    }
+  }
+}

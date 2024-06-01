@@ -1,0 +1,109 @@
+.c-header {
+  background-image: url('../assets/img/header-mob-428px-img.svg');
+  color: var(--white);
+  padding: var(--68px-pr-rem) var(--24px-pr-rem);
+  background-size: cover;
+  background-position: right bottom;
+
+  &__title {
+    font-family: var(--font-secondary);
+    font-size: var(--32px-pr-rem);
+    line-height: var(--32px-pr-rem) + 10;
+  }
+
+  &__button {
+    border-radius: var(--28px-pr-rem);
+  }
+
+  &__description {
+    line-height: calc(var(--16px-pr-rem) * 1.5);
+  }
+
+  &__button--primary {
+    background-color: var(--white);
+    color: var(--black);
+  }
+
+  &__button--secondary {
+    background-color: var(--black);
+    color: var(--white);
+  }
+
+  .o-flex-container-col {
+    gap: var(--24px-pr-rem);
+  }
+
+  .o-flex-container-col .o-flex-container-col {
+    gap: var(--16px-pr-rem);
+  }
+
+  .o-wrapper .o-wrapper {
+    margin: 0;
+  }
+}
+
+/*
+=========================================================================
+    RESPONSIVE
+=========================================================================
+*/
+
+// Small ≥ 576px
+@media screen and (min-width: $sm) {
+  .c-header {
+    background-image: url('../assets/img/header-desk-1280px-img.svg');
+
+    &__title {
+      text-align: center;
+    }
+
+    &__description {
+      text-align: center;
+    }
+
+    .o-wrapper {
+      max-width: var(--758px-pr-rem);
+    }
+  }
+}
+
+// Medium ≥ 768px
+@media screen and (min-width: $md) {
+  .c-header {
+   padding: var(--94px-pr-rem) var(--48px-pr-rem);
+
+   &__title {
+     font-size: var(--44px-pr-rem);
+     line-height: calc(var(--44px-pr-rem) + 10);
+   }
+  } 
+}
+
+// Large ≥ 992px
+@media screen and (min-width: $lg) {
+  .c-header {
+    &__title {
+      font-size: var(--56px-pr-rem);
+      line-height: calc(var(--56px-pr-rem) + 10);
+    }
+
+    &__button {
+      max-width: fit-content;
+    }
+
+    .c-button {
+      padding: var(--12px-pr-rem) var(--16px-pr-rem);
+    }
+
+    .o-flex-container-def {
+      align-items: center;
+    }
+  }
+}
+
+// Extra Large ≥ 1200px
+@media screen and (min-width: $xl) {
+  .c-header {
+    padding: var(--94px-pr-rem) 0;
+  }
+}

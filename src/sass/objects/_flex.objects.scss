@@ -1,0 +1,9 @@
+.o-flex-container-def {
+  display: flex;
+  gap: var(--16px-pr-rem);
+}
+
+.o-flex-container-col {
+  @extend .o-flex-container-def;
+  flex-direction: column;
+}

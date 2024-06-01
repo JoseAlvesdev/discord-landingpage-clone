@@ -1,0 +1,18 @@
+.c-footer {
+  background-color: var(--black);
+  padding: var(--48px-pr-rem) 0;
+  text-align: center;
+}
+
+/*
+=========================================================================
+    RESPONSIVE
+=========================================================================
+*/
+
+// Large
+@media screen and (min-width: 992px) {
+  .c-footer {
+    padding: var(--36px-pr-rem) 0;
+  }
+}
