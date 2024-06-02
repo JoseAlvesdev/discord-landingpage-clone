@@ -1,5 +1,5 @@
 // 1. Main Style
-import '../sass/index.scss';
+import '../sass/index.sass.scss';
 
 // 2. Header Component
 import './header.component';
