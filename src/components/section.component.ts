@@ -80,10 +80,10 @@ function responsiveUpdate() {
 
   for (i of range(0, secQty - 1)) {
     mainContent.children[i].children[0].children[0].classList.remove(
-      screen.width >= 992 ?  'o-flex-container-col' : 'o-grid-container-2cr'
+      window.innerWidth >= 992 ?  'o-flex-container-col' : 'o-grid-container-2cr'
     );
     mainContent.children[i].children[0].children[0].classList.add(
-      screen.width >= 992 ? 'o-grid-container-2cr' : 'o-flex-container-col'
+      window.innerWidth >= 992 ? 'o-grid-container-2cr' : 'o-flex-container-col'
     );
 
     if (i % 2 === 1 && i < secQty - 1) 

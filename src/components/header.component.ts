@@ -43,10 +43,10 @@ if (wrapperButtonsHeader !== null) {
 
 function responsiveUpdate() {
   wrapperButtonsHeader.classList.remove(
-    screen.width < 992 ? 'o-flex-container-def' : 'o-flex-container-col'
+    window.innerWidth < 992 ? 'o-flex-container-def' : 'o-flex-container-col'
   );
   wrapperButtonsHeader.classList.add(
-    screen.width >= 992 ? 'o-flex-container-def' : 'o-flex-container-col'
+    window.innerWidth >= 992 ? 'o-flex-container-def' : 'o-flex-container-col'
   );
 }
 
